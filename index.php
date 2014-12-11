@@ -19,71 +19,9 @@
 		<!-- Font Awesome -->
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		
-		<!-- Text Counter -->
-		<script src="textcounter.min.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		
-		<style>
-			
-			textarea {
-				resize: none;
-				height: 240px;
-			}
-			.top {
-				height: 40px;
-			}
-			.top > div {
-				padding-top: 10px;
-				height: 100%;
-				border-bottom: 1px solid lightgrey;
-			}
-			.top > div:nth-child(1) {
-				border-left: 1px solid lightgrey;
-				border-right: 1px solid lightgrey;
-			}
-			.top > div:nth-child(2) {
-				border-right: 1px solid lightgrey;
-			}
-			
-			#file-bar {
-				height: 30px;
-			}
-			#file-bar > div {
-				padding-top: 6px;
-				height: 100%;
-				display: inline-block;
-			}
-			#file-bar > div:hover {
-				background: lightgrey;
-			}
-		</style>
-		
-		<script type="text/javascript">
-		
-			$(document).ready( function() {
-				
-				// When user enters a key on the #inputText
-				$('#inputText').on( "keyup", function() {
-					
-					// first, get the text from #inputText as as string
-					var char = $(this).val();
-					// second, remove all spaces
-					char = char.replace(/\s/g, '');
-					// set str character count equal to str's length (without spaces now)
-					var charCount = char.length;
-					// output the character count in #character-count element
-					$('#character-count').html(charCount);
-					
-					// first, get the text from #inputText as as string
-					var word = $(this).val();
-					// set word character count equal to word's length
-					var wordCount = word.match(/\S+/g).length;
-					// output the word count in #word-count element
-					$('#word-count').html(wordCount);
-					
-				});
-			});
-			
-		</script>
+		<script src="js/script.js" type="text/javascript"></script>
 		
 		<meta charset="UTF-8" />
 		
