@@ -6,7 +6,7 @@
 	// init database object
 	// include '../db/db.php';
 	
-	echo 'index load successful';
+	echo 'index spinner load successful';
 	
 	// if the request method is a POST request
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
