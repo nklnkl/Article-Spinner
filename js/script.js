@@ -1,5 +1,7 @@
-$(document).ready( function() {				
+$(document).ready( function() {
+
 	// When user enters a key on the #inputText
+	// Updates on screen stats
 	$('#inputText').on( "keyup", function() {
 		
 		// first, get the text from #inputText as as string
@@ -19,4 +21,5 @@ $(document).ready( function() {
 		$('#word-count').html(wordCount);
 		
 	});
+	
 });
