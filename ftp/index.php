@@ -38,7 +38,7 @@
 
 	<body>
 
-		<header id="header" class="container-fluid col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		<header id="header" class="container-fluid col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
 		
 			<section id="file-bar" class="row">
 				
@@ -63,9 +63,9 @@
 			
 		</header>
 		
-		<!-- Input Article Area -->
-		<section id="input-article" class="container-fluid col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-			
+		<section class="container-fluid col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		
+			<!-- Input Article Area -->
 			<div class="row top">
 				
 				<div class="col-md-6 col-sm-12">
