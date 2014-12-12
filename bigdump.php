@@ -43,7 +43,7 @@ error_reporting(E_ALL);
 // Database configuration
 
 $db_server   = 'localhost';
-$db_name     = 'article-spinner';
+$db_name     = 'moby_thesaurus';
 $db_username = 'root';
 $db_password = ''; 
 
@@ -51,7 +51,7 @@ $db_password = '';
 // See http://dev.mysql.com/doc/refman/5.0/en/charset-charsets.html for the full list
 // Change this if you have problems with non-latin letters
 
-$db_connection_charset = 'uft8';
+$db_connection_charset = 'latin1';
 
 // OPTIONAL SETTINGS 
 
