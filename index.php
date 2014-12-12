@@ -19,6 +19,9 @@
 		<!-- Font Awesome -->
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200' rel='stylesheet' type='text/css'>
+		
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		
 		<script src="js/script.js" type="text/javascript"></script>
@@ -33,17 +36,21 @@
 		
 			<section id="file-bar" class="row">
 				
-				<div class="col-sm-2 col-xs-1">
+				<div class="col-sm-1 col-xs-3">
 					<i class="fa fa-file-text-o"></i>
-					<span class="hidden-xs">New</span>
+					<span>New</span>
 				</div>
-				<div class="col-sm-2 col-xs-1">
+				<div class="col-sm-1 col-sm-offset-0 col-xs-3">
 					<i class="fa fa-floppy-o"></i>
-					<span class="hidden-xs">Save</span>
+					<span>Save</span>
 				</div>
-				<div class="col-sm-2 col-xs-1">
+				<div class="col-sm-1 col-sm-offset-0 col-xs-3">
 					<i class="fa fa-folder-open-o"></i>
-					<span class="hidden-xs">Load</span>
+					<span>Load</span>
+				</div>
+				<div class="col-sm-1 col-sm-offset-0 col-xs-3">
+					<i class="fa fa-eraser"></i>
+					<span>Clear</span>
 				</div>
 				
 			</section>
@@ -81,22 +88,22 @@
 				
 				<div class="col-md-6 col-sm-12">
 					<div class="col-xs-6">
-						<span>Adjectives Changed: </span>
+						<span>Adjectives: </span>
 						<span id="adjective-change-count"></span>
 					</div>
 					<div class="col-xs-6">
-						<span>Verbs Changed: </span>
+						<span>Verbs: </span>
 						<span id="verb-change-count"></span>
 					</div>
 				</div>
 				
 				<div class="col-md-6 col-sm-12">
 					<div class="col-xs-6">
-						<span>Total Changed: </span>
+						<span>Total: </span>
 						<span id="change-count"></span>
 					</div>
 					<div class="col-xs-6">
-						<span>Percentage Changed: </span>
+						<span>Percentage: </span>
 						<span id="change-percentage"></span>
 					</div>
 				</div>

@@ -1,31 +1,39 @@
+* {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 200;
+	font-size: 1.05em;
+}
 textarea {
 	resize: none;
 	height: 240px;
+	border: 1px solid grey;
+	border-left: none;
+	border-right: none;
 }
 .top {
-	height: 40px;
 }
 .top > div {
-	padding-top: 10px;
-	height: 100%;
-	border-bottom: 1px solid lightgrey;
-}
-.top > div:nth-child(1) {
-	border-left: 1px solid lightgrey;
-	border-right: 1px solid lightgrey;
-}
-.top > div:nth-child(2) {
-	border-right: 1px solid lightgrey;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 #file-bar {
-	height: 30px;
 }
 #file-bar > div {
 	padding-top: 6px;
 	height: 100%;
 	display: inline-block;
+	text-align: center;
 }
 #file-bar > div:hover {
 	background: lightgrey;
+}
+#file-bar > div > span {
+	display: block;
+}
+#file-bar > div > i {
+	color: grey;
+	border: 1px solid grey;
+	padding: 8px;
+	border-radius: 100%;
 }
