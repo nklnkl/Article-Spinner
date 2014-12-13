@@ -38,34 +38,32 @@
 
 	<body>
 
-		<header id="header" class="container-fluid col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		<header id="header" class="container-fluid col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
 		
 			<section id="file-bar" class="row">
 				
-				<div class="col-sm-1 col-xs-3">
-					<i class="fa fa-file-text-o"></i>
-					<span>New</span>
+				<div id="type-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
+					<i class="fa fa-link"></i>
+					<span>Synonyms</span>
 				</div>
-				<div class="col-sm-1 col-sm-offset-0 col-xs-3">
-					<i class="fa fa-floppy-o"></i>
-					<span>Save</span>
+				<div id="spin-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
+					<i class="fa fa-refresh"></i>
+					<span>Spin</span>
 				</div>
-				<div class="col-sm-1 col-sm-offset-0 col-xs-3">
-					<i class="fa fa-folder-open-o"></i>
-					<span>Load</span>
-				</div>
-				<div class="col-sm-1 col-sm-offset-0 col-xs-3">
+				<div id="clear-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
 					<i class="fa fa-eraser"></i>
 					<span>Clear</span>
 				</div>
+				
+				<input id="action" name="action" type="hidden" value="0" />
 				
 			</section>
 			
 		</header>
 		
-		<!-- Input Article Area -->
-		<section id="input-article" class="container-fluid col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-			
+		<section class="container-fluid col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		
+			<!-- Input Article Area -->
 			<div class="row top">
 				
 				<div class="col-md-6 col-sm-12">

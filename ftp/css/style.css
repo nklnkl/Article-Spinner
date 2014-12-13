@@ -3,6 +3,24 @@
 	font-weight: 200;
 	font-size: 1.05em;
 }
+
+*::selection {
+	background: transparent;
+	color: grey;
+}
+*::-moz-selection {
+	background: lightgrey;
+	color: grey;
+}
+textarea::selection {
+	background: lightgrey;
+	color: grey;
+}
+textarea::-moz-selection {
+	background: transparent;
+	color: grey;
+}
+
 textarea {
 	resize: none;
 	height: 240px;
