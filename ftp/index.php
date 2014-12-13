@@ -42,22 +42,20 @@
 		
 			<section id="file-bar" class="row">
 				
-				<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
-					<i class="fa fa-file-text-o"></i>
-					<span>New</span>
+				<div id="type-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
+					<i class="fa fa-link"></i>
+					<span>Synonyms</span>
 				</div>
-				<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
-					<i class="fa fa-floppy-o"></i>
-					<span>Save</span>
-				</div>
-				<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
-					<i class="fa fa-folder-open-o"></i>
-					<span>Load</span>
-				</div>
-				<div class="col-lg-1 col-md-2  col-sm-2 col-xs-3">
+				<div id="spin-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
 					<i class="fa fa-refresh"></i>
 					<span>Spin</span>
 				</div>
+				<div id="clear-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
+					<i class="fa fa-eraser"></i>
+					<span>Clear</span>
+				</div>
+				
+				<input id="action" name="action" type="hidden" value="0" />
 				
 			</section>
 			
