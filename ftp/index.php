@@ -42,15 +42,15 @@
 		
 			<section id="file-bar" class="row">
 				
-				<div id="type-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
+				<div id="type-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
 					<i class="fa fa-link"></i>
 					<span>Synonyms</span>
 				</div>
-				<div id="spin-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
+				<div id="spin-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
 					<i class="fa fa-refresh"></i>
 					<span>Spin</span>
 				</div>
-				<div id="clear-button" class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
+				<div id="clear-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
 					<i class="fa fa-eraser"></i>
 					<span>Clear</span>
 				</div>
