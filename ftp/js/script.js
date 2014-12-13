@@ -83,19 +83,21 @@ $(document).ready( function() {
 		
 		// place the string and action into a javascript object
 		var toBack = { "action" : action, "input" : inputText };
-		
-		// set object into URL string
-		var toBackString = $.param( toBack );
-		
+
+		// set object into URL string for dev test
+		// var toBackString = $.param( toBack );
 		// output for dev test purposes
-		console.log ( toBackString );
+		// console.log ( toBackString );
 		
 		// call ajax function, send data to backend php
 		$.ajax({
 			type: "POST",
 			url: "php/spinner/",
 			data: toBack,
-			dataType: "text"
+			dataType: "text",
+			success: function( result ) {
+				$('#outputText').val( result );
+			}
 		});
 			
 	});
