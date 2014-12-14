@@ -83,11 +83,6 @@ $(document).ready( function() {
 		
 		// place the string and action into a javascript object
 		var toBack = { "action" : action, "input" : inputText };
-
-		// set object into URL string for dev test
-		// var toBackString = $.param( toBack );
-		// output for dev test purposes
-		// console.log ( toBackString );
 		
 		// call ajax function, send data to backend php
 		$.ajax({
@@ -105,9 +100,52 @@ $(document).ready( function() {
 	// if the clear button is clicked
 	$('#clear-button').on('click', function() {
 	
+		
+	
 		// clear the input text area
 		$('#inputText').val('');
+	
+		var data = {
+		"action" : "2",
+		}
+		
+		// call ajax function, send data to backend php
+		$.ajax({
+			type: "POST",
+			url: "php/user/",
+			data: data,
+			dataType: "text",
+			success: function( result ) {
+				console.log ( result );
+			}
+		});
 		
 	});
+	
+	// if the submit button on the login form is clicked
+	$("#login-form").submit( function() {
+	
+		var data = {
+		"action" : "1",
+		"email" : $("#email-login").val(),
+		"password" : $("#password-login").val()
+		}
+		
+		// call ajax function, send data to backend php
+		$.ajax({
+			type: "POST",
+			url: "php/user/",
+			data: data,
+			dataType: "text",
+			success: function( result ) {
+				console.log ( result );
+				$('#submit-login').val( result );
+			}
+		});
+	
+		// stop default form submit
+		event.preventDefault();
+		
+	})
 	
 });

@@ -1,3 +1,7 @@
+<?php	
+		session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="en-US">
@@ -40,17 +44,27 @@
 
 		<header id="header" class="container-fluid col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
 		
+			<section id="account-bar" class="row">
+				
+				<form id="login-form" name="login-form">
+					<input id="email-login" type="text" name="email-login" class="col-sm-2 col-sm-offset-6 col-xs-4 col-xs-offset-0" placeholder="Email" />
+					<input id="password-login" type="password" name="password-login" class="col-sm-2 col-xs-4" placeholder="Password" />
+					<input id="submit-login" type="submit" name="submit-login" class="col-sm-2 col-xs-4" value="Login/Register" />
+				</form>
+				
+			</section>
+		
 			<section id="file-bar" class="row">
 				
-				<div id="type-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+				<div id="type-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
 					<i class="fa fa-link"></i>
 					<span>Synonyms</span>
 				</div>
-				<div id="spin-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+				<div id="spin-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
 					<i class="fa fa-refresh"></i>
 					<span>Spin</span>
 				</div>
-				<div id="clear-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+				<div id="clear-button" class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
 					<i class="fa fa-eraser"></i>
 					<span>Clear</span>
 				</div>
