@@ -1,4 +1,8 @@
 Article-Spinner
+
+Master (current release) available at
+<a href="http://article-spinner.nikolagman.com/">article-spinner.nikolagman.com</a>
+
 ===============
 
 Allows users to enter text and replaces words with synonyms to generate new text.
