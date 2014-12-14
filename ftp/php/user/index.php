@@ -1,7 +1,14 @@
 <?php
-
+	session_start();
 	header("Content-type: text/plain");
 
+	/**
+		functions called from this index return/echo plain text to front end
+		they will usually return integers
+		that will instruct the front end javascript what to prompt the user
+		besides returning plain text, they do other things such as assigning variables to session variables
+	**/
+	
 	include 'functions.php';
 	
 	if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {

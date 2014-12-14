@@ -1,6 +1,9 @@
-<?php	
-		session_start();
+<?php
+
+	session_start();
+	
 ?>
+
 
 <!DOCTYPE html>
 
@@ -41,6 +44,9 @@
 	</head>
 
 	<body>
+	
+		<section id="message-box" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		</section>
 
 		<header id="header" class="container-fluid col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
 		
@@ -50,6 +56,7 @@
 					<input id="email-login" type="text" name="email-login" class="col-sm-2 col-sm-offset-6 col-xs-4 col-xs-offset-0" placeholder="Email" />
 					<input id="password-login" type="password" name="password-login" class="col-sm-2 col-xs-4" placeholder="Password" />
 					<input id="submit-login" type="submit" name="submit-login" class="col-sm-2 col-xs-4" value="Login/Register" />
+					<input id="account-button" type="button" value="" class="col-sm-3 col-sm-offset-9 col-xs-4 col-xs-offset-8" />
 				</form>
 				
 			</section>

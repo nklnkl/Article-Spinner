@@ -1,4 +1,8 @@
 $(document).ready( function() {
+	
+	// Hide user dependent elements
+	$('#message-box').slideUp(0);
+	$('#account-button').slideUp(0);
 
 	/** Set Event Listeners **/
 
@@ -6,8 +10,44 @@ $(document).ready( function() {
 	// Updates on screen stats
 	$('#inputText').on( "keyup", function() {
 		
+		inputTextKeyup( $(this) );
+		
+	});
+	
+	// if the type button is clicked
+	$('#type-button').on('click', function() {
+	
+		typeButtonClick();
+	
+	});
+	
+	// if the spin button is clicked
+	$('#spin-button').on('click', function() {
+	
+		spinButtonClick();
+			
+	});
+	
+	// if the clear button is clicked
+	$('#clear-button').on('click', function() {
+		
+		clearButtonClick();
+		
+	});
+	
+	// if the submit button on the login form is clicked
+	$("#login-form").submit( function() {
+	
+		loginFormSubmit();
+		
+	});
+	
+	/** Functions to be called **/
+	
+	function inputTextKeyup( $handler ) {
+	
 		// first, get the text from #inputText as as string
-		var char = $(this).val();
+		var char = $( $handler ).val();
 		
 		// second, remove all spaces
 		char = char.replace(/\s/g, '');
@@ -19,7 +59,7 @@ $(document).ready( function() {
 		$('#character-count').html(charCount);
 		
 		// first, get the text from #inputText as as string
-		var word = $(this).val();
+		var word = $( $handler ).val();
 		
 		// set word character count equal to word's length
 		var wordCount = word.match(/\S+/g).length;
@@ -27,10 +67,9 @@ $(document).ready( function() {
 		// output the word count in #word-count element
 		$('#word-count').html(wordCount);
 		
-	});
+	}
 	
-	// if the type button is clicked
-	$('#type-button').on('click', function() {
+	function typeButtonClick() {
 	
 		// find the icon in this
 		var $icon = $('#type-button > i');
@@ -70,10 +109,9 @@ $(document).ready( function() {
 			$('#action').val('0');
 		}
 	
-	});
+	}
 	
-	// if the spin button is clicked
-	$('#spin-button').on('click', function() {
+	function spinButtonClick() {
 		
 		// find string of input text area
 		var inputText = $("#inputText").val();
@@ -94,58 +132,81 @@ $(document).ready( function() {
 				$('#outputText').val( result );
 			}
 		});
-			
-	});
-	
-	// if the clear button is clicked
-	$('#clear-button').on('click', function() {
-	
 		
+	}
+	
+	function clearButtonClick() {
 	
 		// clear the input text area
 		$('#inputText').val('');
+		
+	}
+	
+	function loginFormSubmit() {
 	
 		var data = {
-		"action" : "2",
+			"action" : "1",
+			"email" : $("#email-login").val(),
+			"password" : $("#password-login").val()
+			}
+			
+			// call ajax function, send data to backend php
+			$.ajax({
+				type: "POST",
+				url: "php/user/",
+				data: data,
+				dataType: "text",
+				success: function( result ) {
+					
+					// call login success function
+					loginSuccess( result );
+					
+				}
+			});
+		
+			// stop default form submit
+			event.preventDefault();
+			
+			
+	}
+	
+	function loginSuccess( result ) {
+	
+		// if there is no match
+		if ( result == '0' ) {
+			
+			// show message box, prompt personal hello
+			$('#message-box').html('That email address is not on record, are you registered? Please try again if you are.');
+			// hide message box
+			$('#message-box').slideDown(500).delay(4000).slideUp(500);
+			
+		}
+		// if there is more than one match
+		else if ( result == '1' ) {
+			
+			// show message box, prompt personal hello
+			$('#message-box').html('There seems to be an error regarding your account. Please try to log in again after 24 hours. Sorry for the inconvenience.');
+			// hide message box
+			$('#message-box').slideDown(500).delay(4000).slideUp(500);
+			
+		}
+		// if there is a match
+		else {
+		
+			// show user email on account button
+			$('#account-button').val( result );
+			// show account button
+			$('#account-button').slideDown(500);
+			// hide everything else
+			$('#account-button').siblings().slideUp(500);
+			
+			// show message box, prompt personal hello
+			$('#message-box').html('Hello ' + result + '!');
+			// hide message box
+			$('#message-box').slideDown(500).delay(4000).slideUp(500);
+			
 		}
 		
-		// call ajax function, send data to backend php
-		$.ajax({
-			type: "POST",
-			url: "php/user/",
-			data: data,
-			dataType: "text",
-			success: function( result ) {
-				console.log ( result );
-			}
-		});
-		
-	});
-	
-	// if the submit button on the login form is clicked
-	$("#login-form").submit( function() {
-	
-		var data = {
-		"action" : "1",
-		"email" : $("#email-login").val(),
-		"password" : $("#password-login").val()
-		}
-		
-		// call ajax function, send data to backend php
-		$.ajax({
-			type: "POST",
-			url: "php/user/",
-			data: data,
-			dataType: "text",
-			success: function( result ) {
-				console.log ( result );
-				$('#submit-login').val( result );
-			}
-		});
-	
-		// stop default form submit
-		event.preventDefault();
-		
-	})
+	}
 	
 });

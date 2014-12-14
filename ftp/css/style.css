@@ -52,6 +52,9 @@ textarea {
 	border-bottom: 1px solid lightgrey;
 	background: lightgrey;
 }
+#account-bar > form > input:nth-child(4) {
+	background: lightgrey;
+}
 #account-bar > form > input:nth-child(3):active {
 	background: grey;
 	color: black;
@@ -80,4 +83,14 @@ textarea {
 	border: 1px solid grey;
 	padding: 8px;
 	border-radius: 100%;
+}
+
+#message-box {
+	padding: 12px;
+	background: black;
+	color: white;
+	border: 1px solid white;
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
 }

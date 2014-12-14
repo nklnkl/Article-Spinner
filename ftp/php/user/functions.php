@@ -21,14 +21,14 @@
 		$count = $result->num_rows;
 		if ( $count > 1 ) {
 		
-			// echo 2, which will be sent back to front end, which will indicate to front end not to proceed with login procedure and ask the user to log in again in 24 hours. (error will be reported, support/bug programmers should resolve database issue)
-			echo '2';
+			// echo 2, more than one user with email, prompt user at front end to try again in 24 hours.
+			echo '1';
 			
 		}
 		// if there is no match
 		else if ($count < 1 ) {
 		
-			// echo '0', which will be sent back to front end, which will indicate to front end that the given login information does not exist, ask user if he or she does not remember password or ask to register
+			// echo '0', prompt user that records do not match, suggest register/sign up
 			echo '0';
 			
 		}
@@ -41,7 +41,7 @@
 			// set session id equal to matched id
 			$_SESSION['id'] = $row[0];
 		
-			// echo '1' to indicate to front end to prompt user of successful login
+			// echo email to indicate to front end to prompt user of successful login
 			echo $row[1];
 		
 		}
@@ -50,7 +50,7 @@
 	
 	// echo session id
 	function getSession() {
-		
+		/**
 		// if session id is set
 		if ( isset( $_SESSION['id'] ) ) {
 		
@@ -67,6 +67,8 @@
 			echo '34';
 			
 		}
+		**/
+		echo $_SESSION['id'];
 		
 	}
 
