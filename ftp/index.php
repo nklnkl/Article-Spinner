@@ -47,15 +47,47 @@
 	
 		<section id="message-box" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
 		</section>
+		
+		<section id="register-box" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+		
+			<form id="register-form">
+			
+				<div class="row">
+					<span class="col-xs-6">Registration Form</span>
+					<span id="register-close" class="col-xs-2 col-xs-offset-4">Close</span>
+				</div>
+				<div class="row">
+					<input type="text" id="email-register" name="email-register" class="col-sm-4 col-xs-12" placeholder="Enter your email please" />
+					<input type="password" id="password-register" name="email-register" class="col-sm-4 col-xs-12" placeholder="Create a password" />
+					<input type="submit" id="submit-register" name="submit-register" class="col-sm-4 col-xs-12" />
+				</div>
+			
+			</form>
+		
+		</section>
+		
+		<section id="account-box" class="col-xs-4 col-xs-offset-4">
+		
+			<span id="account-close" class="col-xs-2 col-xs-offset-10">Close</span>
+			<span class="col-xs-12">New Session</span>
+			<span class="col-xs-12">Save Session</span>
+			<span class="col-xs-12">Load Session</span>
+			<span class="col-xs-12">Account Settings</span>
+			<span class="col-xs-12">Log Out</span>
+		
+		</section>
 
 		<header id="header" class="container-fluid col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
 		
 			<section id="account-bar" class="row">
 				
 				<form id="login-form" name="login-form">
-					<input id="email-login" type="text" name="email-login" class="col-sm-2 col-sm-offset-6 col-xs-4 col-xs-offset-0" placeholder="Email" />
-					<input id="password-login" type="password" name="password-login" class="col-sm-2 col-xs-4" placeholder="Password" />
-					<input id="submit-login" type="submit" name="submit-login" class="col-sm-2 col-xs-4" value="Login/Register" />
+					<input id="email-login" type="text" name="email-login" class="col-sm-2 col-sm-offset-4 col-xs-3 col-xs-offset-0" placeholder="Email" />
+					<input id="password-login" type="password" name="password-login" class="col-sm-2 col-xs-3" placeholder="Password" />
+					<input id="submit-login" type="submit" name="submit-login" class="col-sm-2 col-xs-3" value="Login" />
+					
+					<input id="register-button" type="button" name="register-button" class="col-sm-2 col-xs-3" value="Register" />
+					
 					<input id="account-button" type="button" value="" class="col-sm-3 col-sm-offset-9 col-xs-4 col-xs-offset-8" />
 				</form>
 				
