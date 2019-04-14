@@ -17,6 +17,7 @@ class SpinTest(unittest.TestCase):
 
   def test_paragraph(self):
     spin = Spin()
+    
     paragraph = [
       [
         "The", "man", "created", "the", "report"
@@ -31,8 +32,16 @@ class SpinTest(unittest.TestCase):
         "Thus", "the", "university", "paid", "him", "significantly"
       ]
     ]
+
+    expectedParagraph = [
+      ['The', 'male', 'created', 'the', 'announce'],
+      ['The', 'announce', 'was', 'an', 'watching'],
+      ['His', 'colleagues', 'rewarded', 'him', 'for', 'his', 'learning'],
+      ['consequently', 'the', 'college', 'paid', 'him', 'notably']
+    ]
+
     paragraph = spin.paragraph(paragraph, 1)
-    print(paragraph)
+    self.assertEqual(paragraph, expectedParagraph)
 
 if __name__ == "__main__":
   unittest.main()
