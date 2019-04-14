@@ -1,6 +1,10 @@
 Article-Spinner
 
 ===============
+<h2>PLEASE NOTE</h2>
+<p>
+	This branch is now deprecated. I'm currently in the middle of merging the dev branch into the master. NodeJS will no longer be the environment used for this project. I abandoned this project a long time ago, but have been receiving messages/stars/forks/watches from a handful of people about continuing it. Hence, I will continue this project in Python. Check the dev branch for current updates.
+</p>
 
 Allows users to enter text and replaces words with synonyms to generate new text.
 
